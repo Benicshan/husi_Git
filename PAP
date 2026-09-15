@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace IPT_PAP
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Geben Sie Ihren Artikelname, Menge und Einzelpreis ein ?");
+            Console.Write("Artikelname: ");
+            string artikelname = Console.ReadLine();
+
+            Console.Write("Einzelpreis in Franken: ");
+            decimal einzelpreis = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("Menge: ");
+            int menge = int.Parse(Console.ReadLine());
+
+          
+            decimal gesamtpreis = einzelpreis * menge;
+
+            
+            Console.WriteLine();
+            Console.WriteLine("Zusammenfassung ");
+            Console.WriteLine("Artikel: " + artikelname);
+            Console.WriteLine("Einzelpreis: " + einzelpreis.ToString("0.00") + " Fr.");
+            Console.WriteLine("Menge: " + menge);
+            Console.WriteLine("Gesamtpreis: " + gesamtpreis.ToString("0.00") + " Fr.");
+        }
+    }
+}
